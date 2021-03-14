@@ -35,5 +35,12 @@ open class StringBuilder {
     open func toString() -> String {
         return string;
     }
+    
+    open func delete(startIndex: Int, endIndex: Int) -> Self {
+        if let index = string.index(String.Index(encodedOffset: startIndex), offsetBy: endIndex, limitedBy: String.Index(encodedOffset: endIndex)) {
+            string.remove(at: index)
+        }
+        return self
+    }
    
 }
