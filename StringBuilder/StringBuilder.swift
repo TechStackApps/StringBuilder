@@ -42,5 +42,9 @@ open class StringBuilder {
         }
         return self
     }
+    
+    open func length() -> Int {
+        return string.count;
+    }
    
 }
